@@ -6,7 +6,7 @@
 /*   By: prastoin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 15:28:08 by prastoin          #+#    #+#             */
-/*   Updated: 2018/11/22 17:20:28 by amerrouc         ###   ########.fr       */
+/*   Updated: 2018/11/23 13:10:48 by amerrouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ int		verif2(const char **tab);
 int		ft_error(void);
 int		abc(char **str);
 void	mv_piece(char **sqr);
-int		width_piece(char **sqr);
 int		height_piece(char **sqr);
+int		width_piece(char **sqr);
+int		width_ele(char **sqr, int *size);
+int		height_ele(char **sqr, int *size);
+int		volume_ele(char **map, int *size);
 void	rm_piece(char **map, int size_map, char c);
 
 #endif

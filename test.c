@@ -6,7 +6,7 @@
 /*   By: amerrouc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 15:55:18 by amerrouc          #+#    #+#             */
-/*   Updated: 2018/11/22 17:24:14 by amerrouc         ###   ########.fr       */
+/*   Updated: 2018/11/23 13:02:41 by amerrouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int		main(int argc, char **argv)
 {
 	(void)argc;
 	int	i;
+	int	*size;
 
 	i = 1;
 	while (i <= 4)
@@ -25,9 +26,11 @@ int		main(int argc, char **argv)
 	mv_piece(argv + 1);
 	while (i <= 4)
 		printf("%s\n", argv[i++]);
-	rm_piece(argv + 1, 4, 'a');
-	i = 1;
+	size = malloc(sizeof(int) * 2);
+	size[0] = size[1] = 4;
+	printf("volume :%d\n", volume_ele(argv + 1, size));
+/*	i = 1;
 	while (i <= 4)
-		printf("%s\n", argv[i++]);
+		printf("%s\n", argv[i++]);*/
 	return (0);
 }
